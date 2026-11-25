@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nagina Yadav – PHP Laravel Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6f8;--surface:#ffffff;--ink:#14202e;--muted:#4d5b6b;--line:#d5dce3;--accent:#0b6b73;--add:#e2f4e8;--addink:#14502b;--del:#fbe6e4;--delink:#8a1f17;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101820;--surface:#18222d;--ink:#e8edf2;--muted:#a3b0bd;--line:#2c3947;--accent:#5fc3cb;--add:#16372a;--addink:#9fe0b8;--del:#3d2220;--delink:#f2aaa3;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101820;--surface:#18222d;--ink:#e8edf2;--muted:#a3b0bd;--line:#2c3947;--accent:#5fc3cb;--add:#16372a;--addink:#9fe0b8;--del:#3d2220;--delink:#f2aaa3;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+a{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;gap:16px;padding:20px 0;flex-wrap:wrap}
+header.top strong{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:18px}
+nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-size:15px}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;padding:48px 0 56px}
+h1{font:700 clamp(40px,7vw,68px)/1.02 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 16px;letter-spacing:-.02em}
+.lead{color:var(--muted);max-width:46ch;margin:0 0 22px}
+.btn{display:inline-block;padding:10px 18px;border-radius:6px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:500;margin-right:10px}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.diff{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;font:400 13px/1.7 "IBM Plex Mono",ui-monospace,monospace}
+.diff .cap{padding:8px 14px;border-bottom:1px solid var(--line);color:var(--muted);font-family:"IBM Plex Sans",sans-serif;font-size:13px}
+.diff pre{margin:0;overflow-x:auto}
+.diff code{display:block;padding:0 14px;white-space:pre}
+.diff .d{background:var(--del);color:var(--delink)}.diff .a{background:var(--add);color:var(--addink)}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font:700 28px/1.2 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 20px}
+h3{font:600 18px/1.3 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 4px}
+.job{margin-bottom:26px}.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+ul{margin:0;padding-left:20px}li{margin-bottom:6px;max-width:75ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px}
+.card p{margin:6px 0 0;color:var(--muted);font-size:15px}
+.skills dt{font-weight:500;margin-top:12px}.skills dd{margin:2px 0 0;color:var(--muted)}
+footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:24px}nav a{margin:0 14px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><strong>Nagina Yadav</strong>
+<nav><a href="#work">Work</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></header>
+
+<div class="hero">
+<div>
+<h1>I build Laravel apps that hold up in production.</h1>
+<p class="lead">PHP Laravel developer with 2.5+ years of experience on government and enterprise portals: new features, fast APIs, and fixes for live security issues without downtime.</p>
+<a class="btn" href="#contact">Get in touch</a><a class="btn alt" href="#projects">See projects</a>
+</div>
+<div class="diff" role="img" aria-label="Code diff: OTP check moved from the browser to the server session">
+<div class="cap">Real fix: OTP verification moved to the server</div>
+<pre><code class="d">- if ($request-&gt;input('otp_valid') === 'true') {</code>
+<code class="d">-     login($user);   // trusted the browser</code>
+<code class="a">+ if (hash_equals(session('otp'), $request-&gt;otp)) {</code>
+<code class="a">+     login($user);   // checked on the server</code>
+<code>  }</code></pre>
+</div>
+</div>
+
+<section id="work">
+<h2>Work</h2>
+<div class="job"><h3>PHP / Web Developer, Arete Software Pvt. Ltd.</h3>
+<div class="meta">New Delhi · May 2024 – present</div>
+<ul>
+<li>Built and maintained 15+ PHP and Laravel web applications for enterprise and government clients, including the NCORD Portal, ICAI Case TU Portal and CA SETU.</li>
+<li>Fixed an OTP bypass and a forged auto-login cookie with server-side session checks and HMAC signatures.</li>
+<li>Removed XSS and SSRF issues from live government portals with zero production downtime.</li>
+<li>Added audit logging with correlation IDs and generic client-facing errors, closing a log-based information disclosure gap (CWE-532).</li>
+<li>Built secure file upload validation (magic bytes, MIME sniffing, randomized filenames outside the web root) and per-email OTP rate limiting.</li>
+<li>Optimized MySQL queries, built REST APIs, and managed AWS and cPanel deployments.</li>
+</ul></div>
+<div class="job"><h3>PHP Developer, Seek Solution LLP</h3>
+<div class="meta">Lucknow · Dec 2023 – May 2024</div>
+<ul><li>Full-stack client work in PHP, MySQL and Bootstrap, with third-party API integrations, code reviews and bug fixing.</li></ul></div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+<div class="card"><h3>CA SETU</h3><p>Social platform for CA, enterprise, committee and organization users: media posts, polls, recursive comments, @mention approvals and AES-256 encrypted chat.</p></div>
+<div class="card"><h3>ICAI Case TU Portal</h3><p>Led backend for a live portal used by chartered accountants across India, with optimized schemas for high-volume case data.</p></div>
+<div class="card"><h3>NCORD Portal</h3><p>Hardened the Narcotics Coordination Centre portal (narcoordindia.gov.in): XSS/SSRF fixes, PHP 8.1+ updates, malicious file detection and activity logging.</p></div>
+<div class="card"><h3>WebTestify</h3><p>Laravel website scanner that runs security, functional and performance checks and produces a PDF report modeled on C-DAC standards.</p></div>
+<div class="card"><h3>ICAI Awards and nominations</h3><p>Nomination workflows for ICAI 40 Under 40, CA Women Excellence and CMIB ICAI Awards, with dynamic forms, uploads and email alerts.</p></div>
+<div class="card"><h3>Other live sites</h3><p>SPA Apparels inventory system, SFAC VCA portal, an HRMS for attendance and tasks, and the MATE India and IMC portals.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<dl class="skills">
+<dt>Backend</dt><dd>PHP (OOP), Laravel, REST APIs, MVC</dd>
+<dt>Frontend</dt><dd>HTML5, CSS3, Bootstrap 4/5, JavaScript (ES6+), jQuery, AJAX</dd>
+<dt>Databases</dt><dd>MySQL, MSSQL, query optimization, stored procedures</dd>
+<dt>Security</dt><dd>XSS/SSRF remediation, session-based auth, HMAC cookies, bcrypt migration, CSP/HSTS, Burp Suite</dd>
+<dt>Tools</dt><dd>Git, GitHub, AWS, cPanel, Hostinger</dd>
+</dl>
+<p class="meta" style="margin-top:20px">B.Tech in Computer Science (expected 2027), Dr. M.C. Saxena Group of Colleges · PHP Developer Certification, Techpile Technology</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Open to Laravel and PHP backend roles. Email <a href="mailto:naginayadav26810@gmail.com">naginayadav26810@gmail.com</a> or find me on <a href="https://linkedin.com/in/nagina-yadav-a4624b21b">LinkedIn</a>.</p>
+</section>
+<footer>© 2026 Nagina Yadav · Based in Mau, Uttar Pradesh, India</footer>
+</div>
+</body>
+</html>
