@@ -1,116 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Nagina Yadav – PHP Laravel Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+<title>Nagina Yadav | PHP Laravel Developer</title>
 <style>
-:root{--bg:#f4f6f8;--surface:#ffffff;--ink:#14202e;--muted:#4d5b6b;--line:#d5dce3;--accent:#0b6b73;--add:#e2f4e8;--addink:#14502b;--del:#fbe6e4;--delink:#8a1f17;
-color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101820;--surface:#18222d;--ink:#e8edf2;--muted:#a3b0bd;--line:#2c3947;--accent:#5fc3cb;--add:#16372a;--addink:#9fe0b8;--del:#3d2220;--delink:#f2aaa3;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#101820;--surface:#18222d;--ink:#e8edf2;--muted:#a3b0bd;--line:#2c3947;--accent:#5fc3cb;--add:#16372a;--addink:#9fe0b8;--del:#3d2220;--delink:#f2aaa3;color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "IBM Plex Sans",system-ui,sans-serif}
-a{color:var(--accent)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header.top{display:flex;justify-content:space-between;gap:16px;padding:20px 0;flex-wrap:wrap}
-header.top strong{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:18px}
-nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-size:15px}
-nav a:hover{color:var(--ink)}
-.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;padding:48px 0 56px}
-h1{font:700 clamp(40px,7vw,68px)/1.02 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 16px;letter-spacing:-.02em}
-.lead{color:var(--muted);max-width:46ch;margin:0 0 22px}
-.btn{display:inline-block;padding:10px 18px;border-radius:6px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:500;margin-right:10px}
-.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.diff{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;font:400 13px/1.7 "IBM Plex Mono",ui-monospace,monospace}
-.diff .cap{padding:8px 14px;border-bottom:1px solid var(--line);color:var(--muted);font-family:"IBM Plex Sans",sans-serif;font-size:13px}
-.diff pre{margin:0;overflow-x:auto}
-.diff code{display:block;padding:0 14px;white-space:pre}
-.diff .d{background:var(--del);color:var(--delink)}.diff .a{background:var(--add);color:var(--addink)}
-section{padding:36px 0;border-top:1px solid var(--line)}
-h2{font:700 28px/1.2 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 20px}
-h3{font:600 18px/1.3 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 4px}
-.job{margin-bottom:26px}.meta{color:var(--muted);font-size:14px;margin-bottom:8px}
-ul{margin:0;padding-left:20px}li{margin-bottom:6px;max-width:75ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px}
-.card p{margin:6px 0 0;color:var(--muted);font-size:15px}
-.skills dt{font-weight:500;margin-top:12px}.skills dd{margin:2px 0 0;color:var(--muted)}
-footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:24px}nav a{margin:0 14px 0 0}}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+:root{--header-height:3rem;--font-semi:600;--hue-color:355;--first-color:hsl(var(--hue-color),50%,50%);--second-color:hsl(var(--hue-color),56%,12%);--body-font:"Poppins",sans-serif;--big-font-size:2rem;--h2-font-size:1.25rem;--normal-font-size:.938rem;--smaller-font-size:.75rem;--mb-2:1rem;--mb-4:2rem;--mb-5:2.5rem;--mb-6:3rem;--z-back:-10;--z-fixed:100}
+@media screen and (min-width:968px){:root{--big-font-size:3.5rem;--h2-font-size:2rem;--normal-font-size:1rem;--smaller-font-size:.875rem}}
+*,::before,::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:var(--header-height) 0 0 0;font-family:var(--body-font);font-size:var(--normal-font-size);color:var(--second-color)}
+h1,h2,h3,p{margin:0}ul{margin:0;padding:0;list-style:none}a{text-decoration:none}img{max-width:100%;height:auto;display:block}
+.section-title{position:relative;font-size:var(--h2-font-size);color:var(--first-color);margin-top:var(--mb-2);margin-bottom:var(--mb-4);text-align:center}
+.section-title::after{position:absolute;content:"";width:64px;height:.18rem;left:0;right:0;margin:auto;top:2rem;background-color:var(--first-color)}
+.section{padding-top:3rem;padding-bottom:2rem}
+.bd-grid{max-width:1024px;display:grid;margin-left:var(--mb-2);margin-right:var(--mb-2)}
+.l-header{width:100%;position:fixed;top:0;left:0;z-index:var(--z-fixed);background-color:#fff;box-shadow:0 1px 4px rgba(146,161,176,.15)}
+.nav{height:var(--header-height);display:flex;justify-content:space-between;align-items:center;font-weight:var(--font-semi)}
+@media screen and (max-width:767px){.nav__menu{position:fixed;top:var(--header-height);right:-100%;width:80%;height:100%;padding:2rem;background-color:var(--second-color);transition:.5s}}
+.nav__item{margin-bottom:var(--mb-4)}.nav__link{position:relative;color:#fff}
+.nav__link:hover::after,.active-link::after{position:absolute;content:"";width:100%;height:.18rem;left:0;top:2rem;background-color:var(--first-color)}
+.nav__logo,.nav__toggle{color:var(--second-color)}.nav__toggle{font-size:1.5rem;cursor:pointer}
+.show{right:0}
+.home{position:relative;row-gap:5rem;padding:4rem 0 5rem}
+.home__data{align-self:center}
+.home__title{font-size:var(--big-font-size);margin-bottom:var(--mb-2);line-height:1.2}
+.home__title-color{color:var(--first-color)}
+.home__role{font-size:1.25rem;font-weight:var(--font-semi);margin-bottom:var(--mb-5)}
+.home__social{display:flex;flex-direction:column}
+.home__social-icon{width:max-content;margin-bottom:var(--mb-2);font-size:1.5rem;color:var(--second-color)}
+.home__social-icon:hover{color:var(--first-color)}
+.home__img{position:absolute;right:0;bottom:0;width:260px}
+.home__photo{border-radius:50%;border:6px solid var(--first-color);aspect-ratio:1;object-fit:cover}
+.button{display:inline-block;background-color:var(--first-color);color:#fff;padding:.75rem 2.5rem;font-weight:var(--font-semi);border-radius:.5rem;transition:.3s;margin:0 .5rem .5rem 0}
+.button:hover{box-shadow:0 10px 36px rgba(0,0,0,.15)}
+.about__container{row-gap:2rem;text-align:center;max-width:720px}
+.about__subtitle{margin-bottom:var(--mb-2)}
+.about__img{justify-self:center}.about__img img{width:200px;border-radius:.5rem}
+.skills__container{row-gap:2rem;text-align:center}
+.skills__data{display:flex;justify-content:space-between;align-items:center;position:relative;font-weight:var(--font-semi);padding:.5rem 1rem;margin-bottom:var(--mb-4);border-radius:.5rem;box-shadow:0 4px 25px rgba(14,36,49,.15)}
+.skills__icon{font-size:2rem;margin-right:var(--mb-2);color:var(--first-color);font-style:normal}
+.skills__names{display:flex;align-items:center}
+.skills__bar{position:absolute;left:0;bottom:0;background-color:var(--first-color);height:.25rem;border-radius:.5rem;z-index:var(--z-back)}
+.w95{width:95%}.w90{width:90%}.w85{width:85%}.w80{width:80%}.w75{width:75%}.w65{width:65%}
+.work__sub{font-size:1.25rem;text-align:center;margin:var(--mb-4) 0 var(--mb-2)}
+.work__container{row-gap:2rem}
+.work__card{box-shadow:0 4px 25px rgba(14,36,49,.15);border-radius:.5rem;padding:1.25rem}
+.work__card h3{font-size:1.05rem;color:var(--first-color);margin-bottom:.25rem}
+.work__card small{display:block;font-weight:var(--font-semi);margin-bottom:.5rem}
+.work__card ul{list-style:disc;padding-left:1.1rem}.work__card li{margin-bottom:.35rem;font-size:.9rem}
+.work__card p{font-size:.9rem}
+.contact__container{text-align:center;justify-items:center}
+.contact__container p{margin-bottom:var(--mb-4);max-width:520px}
+.footer{background-color:var(--second-color);color:#fff;text-align:center;font-weight:var(--font-semi);padding:2rem 0}
+.footer__title{font-size:2rem;margin-bottom:var(--mb-4)}
+.footer__icon{font-size:1.5rem;color:#fff;margin:0 var(--mb-2)}
+.footer__copy{font-size:var(--smaller-font-size)}
+@media screen and (max-width:320px){.home{row-gap:2rem}.home__img{width:200px}}
+@media screen and (min-width:576px){
+.home{padding:4rem 0 2rem}.home__social{padding-top:0;padding-bottom:2.5rem;flex-direction:row;align-self:flex-end}
+.home__social-icon{margin-bottom:0;margin-right:var(--mb-4)}.home__img{width:300px;bottom:25%}
+.about__container{justify-items:center}
+.skills__container{grid-template-columns:.7fr;justify-content:center;column-gap:1rem}
+.work__container{grid-template-columns:repeat(2,1fr);column-gap:2rem}}
+@media screen and (min-width:768px){
+body{margin:0}.section{padding-top:4rem;padding-bottom:3rem}.section-title{margin-bottom:var(--mb-6)}
+.section-title::after{width:80px;top:3rem}.nav{height:calc(var(--header-height) + 1.5rem)}
+.nav__list{display:flex;padding-top:0}.nav__item{margin-left:var(--mb-6);margin-bottom:0}
+.nav__toggle{display:none}.nav__link{color:var(--second-color)}
+.home{padding:8rem 0 2rem}.home__img{width:400px;bottom:10%}.about__img img{width:300px}
+.skills__container{grid-template-columns:repeat(2,1fr);column-gap:2rem;align-items:center;text-align:initial}
+.work__container{grid-template-columns:repeat(3,1fr)}}
+@media screen and (min-width:992px){.bd-grid{margin-left:auto;margin-right:auto}.home{padding:10rem 0 2rem}.home__img{width:450px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header class="top"><strong>Nagina Yadav</strong>
-<nav><a href="#work">Work</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></header>
+<header class="l-header"><nav class="nav bd-grid">
+<div><a href="#" class="nav__logo">My Portfolio</a></div>
+<div class="nav__menu" id="nav-menu"><ul class="nav__list">
+<li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+<li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+<li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+<li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+<li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li></ul></div>
+<div class="nav__toggle" id="nav-toggle"><i class="bx bx-menu"></i></div>
+</nav></header>
 
-<div class="hero">
+<main class="l-main">
+<section class="home bd-grid" id="home">
+<div class="home__data">
+<h1 class="home__title">I'm <span class="home__title-color">Nagina Yadav</span></h1>
+<p class="home__role">PHP Laravel Developer</p>
+<a href="Nagina_Yadav_Resume.pdf" download class="button">Download Resume</a>
+<a href="#contact" class="button">Hire Me</a>
+</div>
+<div class="home__social">
+<a href="https://www.linkedin.com/in/nagina-yadav-a4624b21b/" target="_blank" rel="noopener" class="home__social-icon" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+<a href="mailto:naginayadav26810@gmail.com" class="home__social-icon" aria-label="Email"><i class="bx bx-envelope"></i></a>
+<a href="https://github.com/NAGINAY" target="_blank" rel="noopener" class="home__social-icon" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+</div>
+</section>
+
+<section class="about section" id="about">
+<h2 class="section-title">About Me</h2>
+<div class="about__container bd-grid">
 <div>
-<h1>I build Laravel apps that hold up in production.</h1>
-<p class="lead">PHP Laravel developer with 2.5+ years of experience on government and enterprise portals: new features, fast APIs, and fixes for live security issues without downtime.</p>
-<a class="btn" href="#contact">Get in touch</a><a class="btn alt" href="#projects">See projects</a>
-</div>
-<div class="diff" role="img" aria-label="Code diff: OTP check moved from the browser to the server session">
-<div class="cap">Real fix: OTP verification moved to the server</div>
-<pre><code class="d">- if ($request-&gt;input('otp_valid') === 'true') {</code>
-<code class="d">-     login($user);   // trusted the browser</code>
-<code class="a">+ if (hash_equals(session('otp'), $request-&gt;otp)) {</code>
-<code class="a">+     login($user);   // checked on the server</code>
-<code>  }</code></pre>
-</div>
-</div>
-
-<section id="work">
-<h2>Work</h2>
-<div class="job"><h3>PHP / Web Developer, Arete Software Pvt. Ltd.</h3>
-<div class="meta">New Delhi · May 2024 – present</div>
-<ul>
-<li>Built and maintained 15+ PHP and Laravel web applications for enterprise and government clients, including the NCORD Portal, ICAI Case TU Portal and CA SETU.</li>
-<li>Fixed an OTP bypass and a forged auto-login cookie with server-side session checks and HMAC signatures.</li>
-<li>Removed XSS and SSRF issues from live government portals with zero production downtime.</li>
-<li>Added audit logging with correlation IDs and generic client-facing errors, closing a log-based information disclosure gap (CWE-532).</li>
-<li>Built secure file upload validation (magic bytes, MIME sniffing, randomized filenames outside the web root) and per-email OTP rate limiting.</li>
-<li>Optimized MySQL queries, built REST APIs, and managed AWS and cPanel deployments.</li>
-</ul></div>
-<div class="job"><h3>PHP Developer, Seek Solution LLP</h3>
-<div class="meta">Lucknow · Dec 2023 – May 2024</div>
-<ul><li>Full-stack client work in PHP, MySQL and Bootstrap, with third-party API integrations, code reviews and bug fixing.</li></ul></div>
+<h2 class="about__subtitle">I'm Nagina Yadav</h2>
+<p class="about__text">I'm a PHP Laravel developer with 2.5+ years of experience building and maintaining web applications for government and enterprise clients. I work on features, REST APIs and database optimization, and I fix security issues such as XSS, SSRF and authentication flaws on live portals without downtime. I'm currently at Arete Software Pvt. Ltd., New Delhi, and pursuing a B.Tech in Computer Science (2027).</p>
+</div></div>
 </section>
 
-<section id="projects">
-<h2>Projects</h2>
-<div class="grid">
-<div class="card"><h3>CA SETU</h3><p>Social platform for CA, enterprise, committee and organization users: media posts, polls, recursive comments, @mention approvals and AES-256 encrypted chat.</p></div>
-<div class="card"><h3>ICAI Case TU Portal</h3><p>Led backend for a live portal used by chartered accountants across India, with optimized schemas for high-volume case data.</p></div>
-<div class="card"><h3>NCORD Portal</h3><p>Hardened the Narcotics Coordination Centre portal (narcoordindia.gov.in): XSS/SSRF fixes, PHP 8.1+ updates, malicious file detection and activity logging.</p></div>
-<div class="card"><h3>WebTestify</h3><p>Laravel website scanner that runs security, functional and performance checks and produces a PDF report modeled on C-DAC standards.</p></div>
-<div class="card"><h3>ICAI Awards and nominations</h3><p>Nomination workflows for ICAI 40 Under 40, CA Women Excellence and CMIB ICAI Awards, with dynamic forms, uploads and email alerts.</p></div>
-<div class="card"><h3>Other live sites</h3><p>SPA Apparels inventory system, SFAC VCA portal, an HRMS for attendance and tasks, and the MATE India and IMC portals.</p></div>
+<section class="skills section" id="skills">
+<h2 class="section-title">Skills</h2>
+<div class="skills__container bd-grid">
+<div>
+<div class="skills__data"><div class="skills__names"><i class="bx bxs-server skills__icon"></i><span>PHP</span></div><div class="skills__bar w90"></div></div>
+<div class="skills__data"><div class="skills__names"><i class="bx bxl-php skills__icon"></i><span>Laravel</span></div><div class="skills__bar w85"></div></div>
+<div class="skills__data"><div class="skills__names"><i class="bx bxs-data skills__icon"></i><span>MySQL / MSSQL</span></div><div class="skills__bar w85"></div></div>
+<div class="skills__data"><div class="skills__names"><i class="bx bx-code-alt skills__icon"></i><span>REST APIs</span></div><div class="skills__bar w85"></div></div>
+<div class="skills__data"><div class="skills__names"><i class="bx bxs-lock-alt skills__icon"></i><span>Application Security</span></div><div class="skills__bar w80"></div></div>
 </div>
+<div>
+<div class="skills__data"><div class="skills__names"><i class="bx bxl-html5 skills__icon"></i><span>HTML5 / Bootstrap</span></div><div class="skills__bar w90"></div></div>
+<div class="skills__data"><div class="skills__names"><i class="bx bxl-css3 skills__icon"></i><span>CSS3</span></div><div class="skills__bar w80"></div></div>
+<div class="skills__data"><div class="skills__names"><i class="bx bxl-javascript skills__icon"></i><span>JavaScript / jQuery / AJAX</span></div><div class="skills__bar w75"></div></div>
+<div class="skills__data"><div class="skills__names"><i class="bx bxl-git skills__icon"></i><span>Git / GitHub</span></div><div class="skills__bar w80"></div></div>
+<div class="skills__data"><div class="skills__names"><i class="bx bxl-microsoft skills__icon"></i><span>C# / .NET MVC</span></div><div class="skills__bar w65"></div></div>
+</div></div>
 </section>
 
-<section id="skills">
-<h2>Skills</h2>
-<dl class="skills">
-<dt>Backend</dt><dd>PHP (OOP), Laravel, REST APIs, MVC</dd>
-<dt>Frontend</dt><dd>HTML5, CSS3, Bootstrap 4/5, JavaScript (ES6+), jQuery, AJAX</dd>
-<dt>Databases</dt><dd>MySQL, MSSQL, query optimization, stored procedures</dd>
-<dt>Security</dt><dd>XSS/SSRF remediation, session-based auth, HMAC cookies, bcrypt migration, CSP/HSTS, Burp Suite</dd>
-<dt>Tools</dt><dd>Git, GitHub, AWS, cPanel, Hostinger</dd>
-</dl>
-<p class="meta" style="margin-top:20px">B.Tech in Computer Science (expected 2027), Dr. M.C. Saxena Group of Colleges · PHP Developer Certification, Techpile Technology</p>
+<section class="work section" id="work">
+<h2 class="section-title">Work</h2>
+<div class="bd-grid">
+<h3 class="work__sub">Experience</h3>
+<div class="work__container bd-grid" style="margin:0">
+<div class="work__card"><h3>PHP / Web Developer</h3><small>Arete Software Pvt. Ltd., New Delhi | May 2024 - Present</small>
+<ul><li>Built and maintained 15+ PHP and Laravel applications for government and enterprise clients.</li><li>Fixed OTP bypass, forged cookie, XSS and SSRF issues on live portals.</li><li>Added audit logging, secure file uploads and OTP rate limiting.</li></ul></div>
+<div class="work__card"><h3>PHP Developer</h3><small>Seek Solution LLP, Lucknow | Dec 2023 - May 2024</small>
+<ul><li>Full-stack client work in PHP, MySQL and Bootstrap.</li><li>Third-party API integrations, code reviews and bug fixing.</li></ul></div>
+</div>
+<h3 class="work__sub">Projects</h3>
+<div class="work__container bd-grid" style="margin:0">
+<div class="work__card"><h3>CA SETU</h3><p>Social platform with media posts, polls, recursive comments, @mention approvals and AES-256 encrypted chat.</p></div>
+<div class="work__card"><h3>ICAI Case TU Portal</h3><p>Led backend for a live portal used by chartered accountants across India.</p></div>
+<div class="work__card"><h3>NCORD Portal</h3><p>Hardened the Narcotics Coordination Centre portal (narcoordindia.gov.in) with XSS/SSRF fixes and activity logging.</p></div>
+<div class="work__card"><h3>WebTestify</h3><p>Laravel website scanner for security, functional and performance checks with PDF reports.</p></div>
+<div class="work__card"><h3>ICAI Awards Systems</h3><p>Nomination workflows for ICAI 40 Under 40, CA Women Excellence and CMIB ICAI Awards.</p></div>
+<div class="work__card"><h3>Other Live Sites</h3><p>SPA Apparels inventory system, SFAC VCA portal, HRMS, MATE India and IMC portals.</p></div>
+</div></div>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-<p>Open to Laravel and PHP backend roles. Email <a href="mailto:naginayadav26810@gmail.com">naginayadav26810@gmail.com</a> or find me on <a href="https://linkedin.com/in/nagina-yadav-a4624b21b">LinkedIn</a>.</p>
-</section>
-<footer>© 2026 Nagina Yadav · Based in Mau, Uttar Pradesh, India</footer>
+<section class="contact section" id="contact">
+<h2 class="section-title">Contact / Hire Me</h2>
+<div class="contact__container bd-grid">
+<p>Open to Laravel and PHP backend roles. Send me an email or connect on LinkedIn.</p>
+<div><a href="mailto:naginayadav26810@gmail.com" class="button">Email Me</a>
+<a href="https://www.linkedin.com/in/nagina-yadav-a4624b21b/" target="_blank" rel="noopener" class="button">LinkedIn</a></div>
 </div>
+</section>
+</main>
+
+<footer class="footer"><div class="bd-grid" style="justify-items:center">
+<h2 class="footer__title">Nagina Yadav</h2>
+<div>
+<a href="https://www.linkedin.com/in/nagina-yadav-a4624b21b/" target="_blank" rel="noopener" class="footer__icon" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+<a href="https://github.com/NAGINAY" target="_blank" rel="noopener" class="footer__icon" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+<a href="mailto:naginayadav26810@gmail.com" class="footer__icon" aria-label="Email"><i class="bx bx-envelope"></i></a>
+</div>
+<p class="footer__copy">&copy; 2026 Nagina Yadav. All rights reserved.</p>
+</div></footer>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+const toggle=document.getElementById('nav-toggle'),menu=document.getElementById('nav-menu');
+if(toggle&&menu){toggle.addEventListener('click',()=>menu.classList.toggle('show'))}
+document.querySelectorAll('.nav__link').forEach(n=>n.addEventListener('click',()=>menu.classList.remove('show')));
+const sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{const y=window.scrollY;sections.forEach(s=>{
+const top=s.offsetTop-58,link=document.querySelector('.nav__menu a[href="#'+s.id+'"]');
+if(link){if(y>top&&y<=top+s.offsetHeight){link.classList.add('active-link')}else{link.classList.remove('active-link')}}})});
+if(window.ScrollReveal){const sr=ScrollReveal({origin:'top',distance:'60px',duration:1500,delay:150});
+sr.reveal('.home__data',{});sr.reveal('.about__subtitle, .about__text',{delay:300});
+sr.reveal('.home__social-icon',{interval:200});sr.reveal('.skills__data, .work__card',{interval:150});}
+</script>
 </body>
 </html>
